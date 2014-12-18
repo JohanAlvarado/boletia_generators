@@ -18,7 +18,6 @@ gem_group :test do
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'capybara', '~> 2.4.4'
   gem 'database_cleaner', '~> 1.3.0'
-  gem 'rspec-sidekiq', '~> 2.0.0'
   gem 'poltergeist', '~> 1.5.1'
   gem 'phantomjs', '~> 1.9.7.1'
   gem 'guard-rails', '~> 0.7.0'
