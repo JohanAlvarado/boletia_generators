@@ -2,9 +2,12 @@ GENERATOR_TEMPLATE_PATH = "~/.icalialabs_rails_generator_template"
 remove_file "README.rdoc"
 create_file "README.md", @app_name.capitalize
 
-#Especify ruby version to be at least version 2.0.0
+create_file ".ruby-version", '2.0.0-pl95'
+create_file ".ruby-gemset", @app_name
+
+#Especify ruby version to be at least version 2.0.0-p195
 inject_into_file "Gemfile", after: "source 'https://rubygems.org'\n\n" do <<-'RUBY'
-ruby '2.0.0-p195'
+  ruby '2.0.0-p195'
 RUBY
 end
 
