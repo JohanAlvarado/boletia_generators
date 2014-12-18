@@ -21,7 +21,7 @@ gem_group :test do
   gem 'poltergeist', '~> 1.5.1'
   gem 'phantomjs', '~> 1.9.7.1'
   gem 'guard', '~> 2.2.3'
-  gem 'guard-rspec','~> 4.0.3'
+  gem 'guard-rspec'
   gem 'shoulda-matchers', '~> 2.7.0'
   gem 'timecop', '~> 0.7.1'
   gem 'vcr', '~> 2.9.3'
