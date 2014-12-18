@@ -1,0 +1,1 @@
+-d postgresql --skip-test-unit -m ~/.icalialabs_rails_generator_template/icalia_app_template.rb --skip-bundle
