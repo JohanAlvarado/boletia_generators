@@ -1,4 +1,4 @@
-GENERATOR_TEMPLATE_PATH = "~/.icalialabs_rails_generator_template"
+GENERATOR_TEMPLATE_PATH = "~/.boletia_rails_generator_template"
 remove_file "README.rdoc"
 create_file "README.md", @app_name.capitalize
 
@@ -63,6 +63,8 @@ application do
 
   config.autoload_paths += %W(\#{config.root}/lib)"
 end
+
+"git init"
 
 #Git configuration
 git :init
