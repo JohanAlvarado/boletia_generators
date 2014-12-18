@@ -20,8 +20,9 @@ gem_group :test do
   gem 'database_cleaner', '~> 1.3.0'
   gem 'poltergeist', '~> 1.5.1'
   gem 'phantomjs', '~> 1.9.7.1'
-  gem 'guard', '~> 2.2.3'
-  gem 'guard-rspec'
+  gem 'guard-rails', '~> 0.7.0'
+  gem 'guard', '~> 2.10.4'
+  gem 'shoulda-matchers', '~> 2.7.0'
   gem 'timecop', '~> 0.7.1'
   gem 'vcr', '~> 2.9.3'
   gem 'webmock', '~> 1.20.4'
@@ -37,6 +38,8 @@ gem_group :production do
   gem "rails_12factor"
 end
 
+run 'bundle install'
+
 #Generates rspec config
 generate "rspec:install"
 
@@ -46,22 +49,6 @@ directory "#{GENERATOR_TEMPLATE_PATH}/rspec_support_files", 'spec/support', :rec
 inject_into_file 'spec/spec_helper.rb', after: "require 'rspec/rails'\n" do <<-'RUBY'
 require 'email_spec'
 RUBY
-end
-
-#Configures application.rb
-application do
-  "# don't generate RSpec tests for views and helpers
-  config.generators do |g|
-    g.test_framework :rspec, fixture: true
-    g.fixture_replacement :factory_girl, dir: 'spec/factories'
-    g.view_specs true
-    g.helper_specs true
-    g.stylesheets = false
-    g.javascripts = false
-    g.helper = false
-  end
-
-  config.autoload_paths += %W(\#{config.root}/lib)"
 end
 
 "git init"
