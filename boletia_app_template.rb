@@ -22,7 +22,6 @@ gem_group :test do
   gem 'phantomjs', '~> 1.9.7.1'
   gem 'guard', '~> 2.2.3'
   gem 'guard-rspec'
-  gem 'shoulda-matchers', '~> 2.7.0'
   gem 'timecop', '~> 0.7.1'
   gem 'vcr', '~> 2.9.3'
   gem 'webmock', '~> 1.20.4'
@@ -38,7 +37,6 @@ gem_group :production do
   gem "rails_12factor"
 end
 
-generate "bundle install"
 #Generates rspec config
 generate "rspec:install"
 
