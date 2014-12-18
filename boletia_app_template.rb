@@ -38,6 +38,7 @@ gem_group :production do
   gem "rails_12factor"
 end
 
+generate "bundle install"
 #Generates rspec config
 generate "rspec:install"
 
