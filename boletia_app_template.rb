@@ -3,6 +3,8 @@ remove_file "README.rdoc"
 create_file "README.md", @app_name.capitalize
 
 create_file ".ruby-version", '2.0.0-pl95'
+
+generate "rvm gemset create #{@app_name}"
 create_file ".ruby-gemset", @app_name
 
 #Especify ruby version to be at least version 2.0.0-p195
